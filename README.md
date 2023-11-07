@@ -2,17 +2,13 @@
 
 ## Overview
 
-This strategy involves intraday trading of selected pairs using cointegration analysis within a specific market universe. The top pairs are dynamically chosen each day.
+This strategy involves intraday trading of pairs
 
 ## Strategy Rules
 
 ### Pair Selection
 
-1. **Cointegration Test:** Pairs are selected based on a proprietary cointegration test.
-
-2. **Top Selection:** A limited number of pairs with significant cointegration are chosen daily.
-
-3. **Capital Allocation:** Equal capital is allocated to each selected pair.
+**Capital Allocation:** Equal capital is allocated to each selected pair.
 
 ### Trading Rules
 
