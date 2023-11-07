@@ -2,23 +2,24 @@
 
 ## Overview
 
-This trading strategy focuses on intraday trading within the NIFTY 100 universe. It aims to identify and trade pairs of stocks from the same industry based on cointegration analysis. The strategy dynamically selects the top 10 most cointegrated pairs for trading each day.
+This strategy involves intraday trading of selected pairs using cointegration analysis within a specific market universe. The top pairs are dynamically chosen each day.
 
 ## Strategy Rules
 
 ### Pair Selection
 
-1. **Cointegration Test:** We perform the Engle-Granger test for cointegration on pairs of stocks from the same industry within the NIFTY 100 universe.
+1. **Cointegration Test:** Pairs are selected based on a proprietary cointegration test.
 
-2. **Top 10 Selection:** Based on the results of the cointegration test, we select the top 10 pairs with the highest cointegration scores (pvalue <=0.05). This selection is based on the last 200 candles of data and changes daily at the market open.
+2. **Top Selection:** A limited number of pairs with significant cointegration are chosen daily.
 
-3. **Capital Allocation:** Equal capital is allocated to each of the selected pairs for trading opportunities.
+3. **Capital Allocation:** Equal capital is allocated to each selected pair.
 
 ### Trading Rules
 
-4. **Pair Ratio Calculation:** For each 2-minute closing value, we calculate the ratio of the selected pair. We also compute the 200-candle Exponential Moving Average (EMA) of the ratio and determine +2 standard deviation (std) and -2 std bands around the EMA.
+4. **Pair Ratio:** Ratio of selected pairs is tracked, and moving averages are calculated.
 
-6. **Long Entry:** We initiate a long entry position when the pair's ratio has deviated by -2 std from its 200 EMA. We exit this long position if the pair reverts to its mean or the time reaches 3:15 PM.
+6. **Long Entry:** Initiate a long entry position when the pair ratio deviates significantly from its moving average. Exit the position if the pair reverts to its mean or at a specific time.
 
-7. **Short Entry:** We initiate a short entry position when the pair's ratio has deviated by +2 std from its 200 EMA. We exit this short position if the pair reverts to its mean or the time reaches 3:15 PM.
+7. **Short Entry:** Initiate a short entry position when the pair ratio deviates significantly from its moving average. Exit the position if the pair reverts to its mean or at a specific time.
 
+Please note that the market, assets, and parameters used in this strategy are proprietary and confidential.
