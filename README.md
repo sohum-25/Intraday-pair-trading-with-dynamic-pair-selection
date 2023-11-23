@@ -13,3 +13,6 @@ The deployment bot follows a structured architecture to facilitate the effective
 Fyers API Integration: Utilized for fetching real-time tick-by-tick data for the selected assets, opening and closing positions
 
 SQLite Database: Used to store both the raw tick-by-tick data, the two-minute interval data and the Trade log for the day for further analysis.
+
+
+**Due to some wrong assumptions in transaction charges this bot is currently shelved and is not active**
